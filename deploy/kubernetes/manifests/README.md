@@ -13,5 +13,7 @@ type: Opaque
 data:
   PUSHOVER_TOKEN: asdf
   PUSHOVER_USER_KEY: asdf
+  DISTRICT: district
+  SCHOOL: school-name
 ```
 ```

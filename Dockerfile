@@ -14,6 +14,7 @@ FROM debian:trixie-slim
 WORKDIR /app
 ENV PATH="$PATH:/app"
 
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=builder /app/target/release/lunch-messenger /app/
 
 ENTRYPOINT [ "/app/lunch-messenger" ]
