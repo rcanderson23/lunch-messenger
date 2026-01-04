@@ -17,8 +17,8 @@ async fn main() -> anyhow::Result<()> {
     let tomorrow = today.checked_add_days(Days::new(1)).unwrap();
 
     let menu = get_menu(
-        "helenaschools",
-        "jim-darcy-elementary-school",
+        &cli.district,
+        &cli.school,
         nutrislice::MenuType::Lunch,
         &tomorrow,
     )
